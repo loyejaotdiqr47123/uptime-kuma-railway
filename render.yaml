@@ -1,16 +1,11 @@
 services:
   # A Docker web service
   - type: web
-    name: Ngrok
+    name: uptime-kuma
     env: docker
-    repo: https://github.com/AkashiCoin/Railway-Ngrok.git # optional
     region: Singapore # optional (defaults to oregon)
     plan: free # optional (defaults to starter)
     healthCheckPath: /
     envVars:
       - key: PORT
-        value: 80
-      - key: NGROK_TOKEN
-        sync: false
-      - key: REGION
-        sync: false
+        value: 3001
